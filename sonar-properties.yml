@@ -47,8 +47,8 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # You need to set this secret in your GitHub repository settings
       run: |
         sonar-scanner \
-          -Dsonar.projectKey=your_project_key \
-          -Dsonar.organization=your_organization_key \
-          -Dsonar.sources=. \
+          -Dsonar.projectKey=shreekrishnapandey_playwrightAuto \
+          -Dsonar.organization=shreekrishnapandey\
+          -Dsonar.sources=tests
           -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+          -Dsonar.login=${{6f4548e34fbda811533abc2b4c7d9bc0c0870d1b}}
