@@ -1,6 +1,10 @@
 name: Playwright Tests with SonarQube
 
-on: [push, pull_request]
+on: 
+  push:
+  branches:
+    -main
+    -branch-*
 
 jobs:
   test:
@@ -51,4 +55,5 @@ jobs:
           -Dsonar.organization=shreekrishnapandey\
           -Dsonar.sources=tests
           -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.login=${{6f4548e34fbda811533abc2b4c7d9bc0c0870d1b}}
+          -Dsonar.login=$SONAR_TOKEN
+          -Dsonar.branch.name=master
